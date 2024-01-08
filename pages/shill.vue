@@ -8,7 +8,7 @@
     class="mt-1" 
     :showQuotedPost="$config.showRepliesOnHomepage" 
     :allPosts="true" 
-    orbisContext="kjzl6cwe1jw146ryuc6m63h5l542wwde6fmza8xu91okwn9hz9nf76ae109yq4r" 
+    orbisContext="kjzl6cwe1jw14bbfcpyha0lk1q3nrb1suoec3edma8i8b0g0lbyh73bl57igwlr" 
   />
 </template>
 

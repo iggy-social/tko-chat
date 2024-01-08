@@ -129,7 +129,7 @@ export default defineNuxtConfig({
         "referral": false,
         "swap": true, 
         "stake": false, 
-        "sendTokens": false, 
+        "sendTokens": true, 
         "spotify": false
       }, 
       showRepliesOnHomepage: true, // show replies on the homepage  

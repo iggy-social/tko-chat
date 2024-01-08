@@ -92,7 +92,7 @@
           {{post.count_replies}}
         </NuxtLink>
 
-        <IggyPostMint :post="post" :parsedText="parsedText" v-if="isActivated" />
+        <IggyPostMint :post="post" :parsedText="parsedText" v-if="isActivated && $config.iggyPostMinterAddress" />
 
         <span v-if="post.master" class="cursor-pointer hover-color ms-2" data-bs-toggle="modal" :data-bs-target="'#replyModal'+post.stream_id">
           <i class="bi bi-reply" /> Reply

@@ -53,7 +53,7 @@ export default defineNuxtConfig({
       activityPointsAddress: "",
       airdropApAddress: "", // chat token claim for APs
       airdropClaimDomainsAddress: "", // chat token claim for domain holders
-      blockExplorerBaseUrl: "https://explorer.jolnir.taiko.xyz",
+      blockExplorerBaseUrl: "https://explorer.katla.taiko.xyz",
       chatTokenAddress: "", // chat token address
       chatTokenImage: "", // chat token image
       chatTokenSymbol: "CHAT", // chat token symbol or name
@@ -119,7 +119,7 @@ export default defineNuxtConfig({
       punkNumberOfPrices: 1, // number of different prices (based on domain length), usually 1 (price()) or 5 (price1char() - price5char())
       punkTldAddress: "0x4087fb91A1fBdef05761C02714335D232a2Bf3a1", // punk domain TLD address
       randomPostsNumber: 1, // number of random post NFTs to show in the sidebar widget
-      rpcCustom: process.env.RPC_CUSTOM || "https://rpc.jolnir.taiko.xyz", // Custom RPC URL
+      rpcCustom: process.env.RPC_CUSTOM || "https://rpc.katla.taiko.xyz", // Custom RPC URL
       showFeatures: { // show/hide features in sidebars (if you have too many "true", make the sidebar scrollable --> sidebarLeftSticky: false)
         "activityPoints": false, 
         "airdrop": false, 
@@ -129,7 +129,7 @@ export default defineNuxtConfig({
         "nftLaunchpad": false, 
         "randomMintedPosts": true, 
         "referral": false,
-        "swap": true, 
+        "swap": false, 
         "stake": false, 
         "sendTokens": true, 
         "spotify": false
@@ -139,11 +139,11 @@ export default defineNuxtConfig({
       spotifyPlaylistId: "5y7f2Wxfq49G5KuNQfMPbk", // enter just the ID of the playlist (not the full URL)  
       stakingContractAddress: "", // this is also the stake/gov token address
       stakeTokenSymbol: "IGT", // stake token symbol (governance token symbol)
-      supportedChainId: 167007,
+      supportedChainId: 167008,
       swapPriceImpactMaxBps: 1000, // max price impact in bips (1 bps = 0.01%, 1000bps = 10%) for the swap function
-      swapRouterAddress: "0xce314209aB485bE222CE85F653Ac918f54532503", // iggy swap router contract address
+      swapRouterAddress: "", // iggy swap router contract address
       tenorApiKey: process.env.TENOR_KEY || "",
-      tldName: ".testaiko",
+      tldName: ".ktaiko",
       tokenAddress: null, // leave null if it's a native token of the chain
       tokenDecimals: 18,
       tokenSymbol: "ETH"

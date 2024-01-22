@@ -9,8 +9,8 @@ export default defineNuxtPlugin(() => {
       return "Ethereum";
     } else if (chainId === 10) {
       return "Optimism";
-    } else if (chainId === 167007) {
-      return "Taiko Testnet";
+    } else if (chainId === 167008) {
+      return "Taiko Katla Testnet";
     } else if (chainId === 14) {
       return "Flare";
     }  else if (chainId === 19) {
@@ -78,13 +78,13 @@ export default defineNuxtPlugin(() => {
     if (networkName == "Ethereum") {
       method = "wallet_switchEthereumChain"
       params = [{ chainId: "0x1" }] 
-    } else if (networkName == "Taiko Testnet") {
-      networkId = 167007;
+    } else if (networkName == "Taiko Katla Testnet") {
+      networkId = 167008;
       method = "wallet_addEthereumChain"
       params = [{ 
-        blockExplorerUrls: [ "https://explorer.jolnir.taiko.xyz" ],
+        blockExplorerUrls: [ "https://explorer.katla.taiko.xyz" ],
         chainId: ethers.utils.hexValue(networkId),
-        chainName: "Taiko Testnet",
+        chainName: "Taiko Katla Testnet",
         nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
         rpcUrls: [getRpcs2()[networkId]]
       }] 

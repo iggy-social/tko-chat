@@ -78,9 +78,9 @@ export default defineNuxtConfig({
       linkPreviews: process.env.LINK_PREVIEW_SERVICE || "netlify", // "netlify", "vercel", or "microlink" (or leave empty for no link previews)
       lpTokenAddress: "", // liquidity pool token (token to stake in the staking contract)
       lpTokenSymbol: "LP tokens", // LP token symbol
-      marketplacePostNftUrl: "https://alienswap.xyz/assets/scroll/0x06A7Ab7Bb68b0ad6eB7688C5781E60BE6AFc658d",
-      marketplacePostNftItemUrl: "https://alienswap.xyz/assets/scroll/0x06A7Ab7Bb68b0ad6eB7688C5781E60BE6AFc658d/", // url (append nft id to it)
-      marketplaceNftCollectionBaseUrl: "https://alienswap.xyz/assets/scroll/", // url (append nft address to it)
+      marketplacePostNftUrl: "https://alienswap.xyz/assets/taiko/0x06A7Ab7Bb68b0ad6eB7688C5781E60BE6AFc658d",
+      marketplacePostNftItemUrl: "https://alienswap.xyz/assets/taiko/0x06A7Ab7Bb68b0ad6eB7688C5781E60BE6AFc658d/", // url (append nft id to it)
+      marketplaceNftCollectionBaseUrl: "https://alienswap.xyz/assets/taiko/", // url (append nft address to it)
       newsletterLink: "https://paragraph.xyz/@iggy?modal=subscribe",
       nftDefaultRatio: 1, // default ratio for the NFT price bonding curve
       nftLaunchpadBondingAddress: "", // NFT launchpad with bonding curve contract address

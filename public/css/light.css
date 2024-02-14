@@ -124,6 +124,3 @@
 [data-bs-theme=light] .bg-mode {
   background-color: var(--bs-mode) !important;
 }
-[data-bs-theme-light]p.card-subtitle.mb-2.text-muted a:hover {
-    color: var(--bs-link-color);
-}

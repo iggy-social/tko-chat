@@ -141,6 +141,10 @@
     font-weight: 500;
 }
 
-[data-bs-theme=light]p.card-subtitle.mb-2.text-muted a:hover {
-    color: var(--bs-link-color);
+[data-bs-theme=light] p.card-subtitle.mb-2.text-muted a:hover {
+    color: #E81899;
+}
+
+[data-bs-theme=light] div.card.m-2.bg-light {
+  border: 1px ridge white;
 }

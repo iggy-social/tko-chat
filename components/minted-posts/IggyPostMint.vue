@@ -236,6 +236,11 @@ export default {
                 options["master"] = this.post.stream_id;
               }
 
+              // if post has tags, add them to the options
+              if (this.post?.content?.tags) {
+                options["tags"] = this.post.content.tags;
+              }
+
               options["data"] = {
                 type: "mintedPost",
                 collectionAddress: this.$config.iggyPostAddress,
@@ -274,6 +279,14 @@ export default {
 
     return {
       address, chainId, isActivated, signer, toast, userStore
+    }
+  },
+
+  watch: {
+    chainId() {
+      if (this.isSupportedChain) {
+        this.fetchMintData();
+      }
     }
   }
 }

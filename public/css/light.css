@@ -132,9 +132,15 @@
 [data-bs-theme=light] p.card-subtitle.mb-2.text-muted a {
     color: #555;
 }
+
 [data-bs-theme=light] p.card-subtitle.mb-2.text-muted span a {
     font-weight: normal;
 }
+
 [data-bs-theme=light] .col-10.col-md-11 p a {
     font-weight: 500;
+}
+
+[data-bs-theme=light]p.card-subtitle.mb-2.text-muted a:hover {
+    color: var(--bs-link-color);
 }

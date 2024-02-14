@@ -95,7 +95,7 @@ export default {
       } else if (this.post?.context_details.context_id) {
         return this.post.context_details.context_id;
       } else {
-        return this.$config.chatChannels.general;
+        return this.$config.orbisContext;
       }
     },
 
@@ -118,7 +118,6 @@ export default {
       if (sanitizedText.length > 183) {
         //this.textPreview = sanitizedText.replace(/[^\x00-\x7F]/g, "").substring(0, 180) + "..."; // uncomment if you want to remove non-ascii characters (e.g. emojis)
         this.textPreview = sanitizedText.substring(0, 180) + "...";
-        console.log(this.textPreview);
       } else if (sanitizedText.length === 0) {
         this.textPreview = "";
       } else {

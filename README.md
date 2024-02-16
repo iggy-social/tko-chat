@@ -4,12 +4,6 @@ TKO Chat is a Web3 Social app on Taiko. It is based on the [Iggy Social](https:/
 
 Link: https://tko.chat/.
 
-## Change GitHub settings (needed only for build.yml)
-
-In your repository, go to Settings -> Actions -> General. Select `Read and write permissions`. Also make sure you have the necessary env vars in your Settings.
-
-If you do not need `build.yml`, delete it and ignore these instructions.
-
 ## .env
 
 Create a `.env` file from `.env.example`.

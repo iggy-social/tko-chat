@@ -129,13 +129,15 @@
               class="form-control" 
               rows="3" 
               placeholder="Enter your reply"
+              :disabled="waitingReply"
+              v-on:keydown.ctrl.enter="replyPost"
             ></textarea>
           </div>
         </div>
 
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button :disabled="!userStore.getIsConnectedToOrbis" type="button" class="btn btn-primary" @click="replyPost">Submit reply</button>
+          <button :disabled="!userStore.getIsConnectedToOrbis || waitingReply" type="button" class="btn btn-primary" @click="replyPost">Submit reply</button>
         </div>
       </div>
     </div>
@@ -211,7 +213,8 @@ export default {
       quoteLimit: 200,
       replyText: null,
       showFullText: false,
-      waitingDeletePost: false
+      waitingDeletePost: false,
+      waitingReply: false
     }
   },
 
@@ -613,6 +616,8 @@ export default {
     },
 
     async replyPost() {
+      this.waitingReply = true;
+
       if (this.userStore.getIsConnectedToOrbis) {
 
         const options = {
@@ -645,6 +650,8 @@ export default {
       } else {
         this.toast("Please sign into chat to be able to reply to a post.", {type: "error"});
       }
+
+      this.waitingReply = false;
     },
 
     openPostDetails() {

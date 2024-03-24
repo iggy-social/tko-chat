@@ -103,27 +103,17 @@
           </div>
         
         </div>
-      </div>
-    </div>
 
-    <!-- Categories / Tags Small Button -->
-    <!--
-    <div v-if="!id" class="d-flex justify-content-end mb-2">
-      <div class="btn-group">
-        <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          {{ getSelectedTagObject.title }}
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <span 
-            v-for="(tagObject, index) in filteredCategories"
-            :key="tagObject.slug"
-            class="dropdown-item cursor-pointer"
-            @click="changeTag(index)"
-          >{{ tagObject.title }}</span>
-        </ul>
+        <div class="d-flex mt-2 row">
+          <img 
+            v-for="(imgLink, index) in getAllImagesFromText(postText)" 
+            :src="imgLink" 
+            :key="index"
+            class="img-fluid img-thumbnail m-1 col-2" 
+          />
+        </div>
       </div>
     </div>
-    -->
 
     <div v-if="orbisPosts">
       <ChatPost 
@@ -162,7 +152,7 @@ import SwitchChainButton from "~/components/SwitchChainButton.vue";
 import TenorGifSearch from "~/components/tenor/TenorGifSearch.vue";
 import TenorStickerSearch from "~/components/tenor/TenorStickerSearch.vue";
 import FileUploadModal from "~/components/storage/FileUploadModal.vue";
-
+import { getAllImagesFromText } from "~/utils/textUtils";
 import EmojiPicker from '~/components/EmojiPicker.vue'
 import 'emoji-mart-vue-fast/css/emoji-mart.css'
 

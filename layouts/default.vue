@@ -428,20 +428,25 @@ export default {
 		}
 
 		async function fetchUserDomain() {
-			if (chainId.value === $config.supportedChainId && address.value != userStore.getCurrentUserAddress) {
-				userStore.setCurrentUserAddress(address.value)
+			if (
+				chainId.value === $config.supportedChainId && 
+				String(address.value).toLowerCase() != String(userStore.getCurrentUserAddress).toLowerCase()
+			) {
+				const checksummedAddress = ethers.utils.getAddress(address.value)
+
+				userStore.setCurrentUserAddress(String(checksummedAddress))
 
 				let userDomain
 
 				if (signer.value) {
-					userDomain = await getDomainName(address.value, signer.value)
+					userDomain = await getDomainName(checksummedAddress, signer.value)
 				} else {
-					userDomain = await getDomainName(address.value)
+					userDomain = await getDomainName(checksummedAddress)
 				}
 
 				if (userDomain) {
 					userStore.setDefaultDomain(userDomain + $config.tldName)
-					storeUsername(window, address.value, userDomain + $config.tldName)
+					storeUsername(window, checksummedAddress, userDomain + $config.tldName)
 				} else {
 					userStore.setDefaultDomain(null)
 				}

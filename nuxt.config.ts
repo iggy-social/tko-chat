@@ -51,7 +51,7 @@ export default defineNuxtConfig({
 			activityPointsAddress: '',
 			airdropApAddress: '', // chat token claim for APs
 			airdropClaimDomainsAddress: '', // chat token claim for domain holders
-			blockExplorerBaseUrl: 'https://blockscoutapi.hekla.taiko.xyz',
+			blockExplorerBaseUrl: 'https://taikoscan.network',
 			chatChannels: {
 				// go to Orbis Dashboard (https://useorbis.com/dashboard), create a new Project and then create a new Context for each of the channels below
 				general: 'kjzl6cwe1jw14866scmyqmb6ta1ifiyl9tvyujzneg0q4lzu3pezz2e8220jmpm', // general discussion channel
@@ -73,8 +73,8 @@ export default defineNuxtConfig({
 			getPostsLimit: 30, // number of posts to fetch from Orbis in the getPosts() function
 			governanceUrl: 'https://snapshot.org/#/sgbchat.eth', // governance url (snapshot, Tally, etc.)
 			iggyPostAddress: '0x06A7Ab7Bb68b0ad6eB7688C5781E60BE6AFc658d',
-			iggyPostMinterAddress: '0x2F103ec022a1d99291077a082b2DC24C734E58A3',
-			iggyPostStatsAddress: '0x2D4144B4E00cf1dC1c4DeDa37cb1CaCEda030998',
+			iggyPostMinterAddress: '0x5e54CebB2612744cB56547bC7CC41466ad7ac557',
+			iggyPostStatsAddress: '0xF40284a811c82b4B9ab22E94Bb909Df6d2c66C08',
 			imagekitEndpoint: process.env.IMAGEKIT_ENDPOINT,
 			imagekitPublicKey: process.env.IMAGEKIT_PUBLIC_KEY,
 			ipfsGateway: 'https://cloudflare-ipfs.com/ipfs/',
@@ -83,9 +83,9 @@ export default defineNuxtConfig({
 			linkPreviews: process.env.LINK_PREVIEW_SERVICE || 'netlify', // "netlify", "vercel", or "microlink" (or leave empty for no link previews)
 			lpTokenAddress: '', // liquidity pool token (token to stake in the staking contract)
 			lpTokenSymbol: 'LP tokens', // LP token symbol
-			marketplacePostNftUrl: 'https://blockscoutapi.hekla.taiko.xyz/token/0x06A7Ab7Bb68b0ad6eB7688C5781E60BE6AFc658d',
-			marketplacePostNftItemUrl: 'https://blockscoutapi.hekla.taiko.xyz/token/0x06A7Ab7Bb68b0ad6eB7688C5781E60BE6AFc658d/instance/', // url (append nft id to it)
-			marketplaceNftCollectionBaseUrl: 'https://blockscoutapi.hekla.taiko.xyz/token/', // url (append nft address to it)
+			marketplacePostNftUrl: 'https://taikoscan.network/token/0x4087fb91A1fBdef05761C02714335D232a2Bf3a1/inventory',
+			marketplacePostNftItemUrl: 'https://taikoscan.network/nft/0x4087fb91A1fBdef05761C02714335D232a2Bf3a1/', // url (append nft id to it)
+			marketplaceNftCollectionBaseUrl: 'https://taikoscan.network/token/', // url (append nft address to it)
 			newsletterLink: '',
 			nftDefaultRatio: 1, // default ratio for the NFT price bonding curve
 			nftLaunchpadBondingAddress: '', // NFT launchpad with bonding curve contract address
@@ -107,11 +107,11 @@ export default defineNuxtConfig({
       projectDescription: "TKO Chat is the first decentralized social network on the Taiko network.",
 			projectTwitter: 'https://twitter.com/iggysocial',
 			projectUrl: 'https://tko.chat', // without trailing slash!
-			punkMinterAddress: '', // punk domain minter contract address
-			punkNumberOfPrices: 1, // number of different prices (based on domain length), usually 1 (price()) or 5 (price1char() - price5char())
+			punkMinterAddress: '0x7e8aB50697C7Abe63Bdab6B155C2FB8D285458cB', // punk domain minter contract address
+			punkNumberOfPrices: 5, // number of different prices (based on domain length), usually 1 (price()) or 5 (price1char() - price5char())
 			punkTldAddress: '0x4087fb91A1fBdef05761C02714335D232a2Bf3a1', // punk domain TLD address
 			randomPostsNumber: 1, // number of random post NFTs to show in the sidebar widget
-			rpcCustom: process.env.RPC_CUSTOM || 'https://rpc.hekla.taiko.xyz', // Custom RPC URL
+			rpcCustom: process.env.RPC_CUSTOM || 'https://rpc.taiko.xyz', // Custom RPC URL
 			showFeatures: {
 				// show/hide features in sidebars (if you have too many "true", make the sidebar scrollable --> sidebarLeftSticky: false)
 				activityPoints: false,
@@ -132,11 +132,11 @@ export default defineNuxtConfig({
 			spotifyPlaylistId: '5y7f2Wxfq49G5KuNQfMPbk', // enter just the ID of the playlist (not the full URL)
 			stakingContractAddress: '', // this is also the stake/gov token address
 			stakeTokenSymbol: 'IGT', // stake token symbol (governance token symbol)
-			supportedChainId: 167009,
+			supportedChainId: 167000,
 			swapPriceImpactMaxBps: 1000, // max price impact in bips (1 bps = 0.01%, 1000bps = 10%) for the swap function
 			swapRouterAddress: '', // iggy swap router contract address
 			tenorApiKey: process.env.TENOR_KEY || '',
-			tldName: '.hekla',
+			tldName: '.🥁',
 			tokenAddress: null, // leave null if it's a native token of the chain
 			tokenDecimals: 18,
 			tokenSymbol: 'ETH',

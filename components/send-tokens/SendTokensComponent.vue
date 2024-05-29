@@ -14,6 +14,7 @@
 					placeholder="Enter recipient's domain name or address"
 					@keyup="findBlankCharacter"
 				/>
+				<span class="input-group-text" id="basic-addon2">{{ $config.tldName }}</span>
 			</div>
 
 			<div class="form-text" id="basic-addon4" v-if="hasBlankCharacter">
@@ -238,6 +239,12 @@ export default {
 		},
 
 		async send() {
+			if (!this.inputReceiver.includes('.')) {
+				if (!this.inputReceiver.endsWith(this.$config.tldName)) {
+					this.inputReceiver = this.inputReceiver + this.$config.tldName
+				}
+			}
+
 			// if recipient includes a dot, check if it ends with tldName. If not, throw error via toast
 			if (this.inputReceiver.includes('.')) {
 				if (!this.inputReceiver.endsWith(this.$config.tldName)) {

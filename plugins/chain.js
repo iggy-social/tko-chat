@@ -188,6 +188,14 @@ const chains = [
 		blockExplorer: 'https://blastscan.io',
 	},
 	{
+		chainId: 167000,
+		name: 'Taiko',
+		currency: 'ETH',
+		rpc1: 'https://rpc.taiko.xyz',
+		rpc2: 'https://rpc.taiko.xyz',
+		blockExplorer: 'https://taikoscan.network',
+	},
+	{
 		chainId: 167009,
 		name: 'Taiko Hekla Testnet',
 		currency: 'ETH',

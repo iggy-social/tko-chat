@@ -83,8 +83,8 @@ export default defineNuxtConfig({
 			linkPreviews: process.env.LINK_PREVIEW_SERVICE || 'netlify', // "netlify", "vercel", or "microlink" (or leave empty for no link previews)
 			lpTokenAddress: '', // liquidity pool token (token to stake in the staking contract)
 			lpTokenSymbol: 'LP tokens', // LP token symbol
-			marketplacePostNftUrl: 'https://taikoscan.network/token/0x4087fb91A1fBdef05761C02714335D232a2Bf3a1/inventory',
-			marketplacePostNftItemUrl: 'https://taikoscan.network/nft/0x4087fb91A1fBdef05761C02714335D232a2Bf3a1/', // url (append nft id to it)
+			marketplacePostNftUrl: 'https://taikoscan.network/token/0x06A7Ab7Bb68b0ad6eB7688C5781E60BE6AFc658d/inventory',
+			marketplacePostNftItemUrl: 'https://taikoscan.network/nft/0x06A7Ab7Bb68b0ad6eB7688C5781E60BE6AFc658d/', // url (append nft id to it)
 			marketplaceNftCollectionBaseUrl: 'https://taikoscan.network/token/', // url (append nft address to it)
 			newsletterLink: '',
 			nftDefaultRatio: 1, // default ratio for the NFT price bonding curve

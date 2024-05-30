@@ -27,7 +27,7 @@
 
 			<div class="row">
 				<div class="col-md-5 text-center mb-3">
-					<Image v-if="cImage" :url="cImage" :cls="'img-fluid img-thumbnail rounded col-12'" :alt="cName" :key="cImage" />
+					<Image :url="cImage" v-if="cImage" :cls="'img-fluid img-thumbnail rounded col-12'" :alt="cName" :key="cImage" />
 
 					<div class="dropdown mt-3">
 						<button

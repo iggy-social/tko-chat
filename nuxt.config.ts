@@ -65,7 +65,7 @@ export default defineNuxtConfig({
 			chatTokenSymbol: '', // chat token symbol or name
 			domainRequiredToPost: true,
 			expiryCollections: 1000 * 60 * 60 * 24 * 7, // must be in milliseconds (0 means no expiration)
-			expiryUsernames: 1000 * 60 * 60 * 12 * 1, // must be in milliseconds (0 means no expiration)
+			expiryUsernames: 1000 * 60 * 60 * 24 * 7, // must be in milliseconds (0 means no expiration)
 			favicon: '/img/favicon.svg',
 			fileUploadEnabled: true, // enable/disable file uploads (enable only if external file storage is used, e.g. IPFS via ThirdWeb)
 			fileUploadSizeLimit: 1 * 1024 * 1024, // max file upload size in bytes (1 * 1024 * 1024 = 1 MB)
